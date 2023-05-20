@@ -1,6 +1,8 @@
 node_modules/
 .cache/
-public/~partytown
-public/page-data
+
+public/*
+!public/static/
+!public/static/**/*
 
 src/gatsby-types.d.ts
