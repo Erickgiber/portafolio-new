@@ -19,6 +19,6 @@ export default IndexPage;
 export const Head: HeadFC = () => (
   <>
     <title>Erick Ramirez</title>
-    <link rel="icon" href="/static/icons/favicon.ico" />
+    <link rel="icon" href="/icons/favicon.ico" />
   </>
 );
