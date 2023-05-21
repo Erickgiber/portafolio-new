@@ -1,14 +1,19 @@
-import { Link } from 'gatsby';
+import {Icon} from '@iconify/react';
+import {Link} from 'gatsby';
 import React from 'react';
-import { leftList } from "../config";
+import {leftList} from "../config";
 
 export const Left = () => {
     return (
-        <ul className='left'>
+        <ul className="left">
             {leftList.map((item, index) => (
-                <Link to={item.link} key={index}>
-                    <li >{item.title}</li>
-                </Link>
+                <li key={index}>
+                    <Link className="link" target={item.target} to={item.link}>
+                        {item.icon && <Icon icon={item.icon}/>}
+                        {item.title}
+                    </Link>
+                </li>
+
             ))}
         </ul>
     );

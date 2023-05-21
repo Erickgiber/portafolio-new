@@ -1,6 +1,7 @@
 export const rightList = [
     {
-        title: 'Built on Gatsby',
-        icon: '',
+        title: 'Gatsby',
+        icon: 'vscode-icons:file-type-gatsby',
+        link: '',
     }
 ];

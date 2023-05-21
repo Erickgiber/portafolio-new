@@ -1,18 +1,25 @@
 export const leftList = [
     {
         title: 'My skills',
-        link: '/skill'
+        link: '/skill',
+        target: '',
+        icon: '',
     },
     {
         title: 'About me',
-        link: '/about'
+        link: '/about',
+        target: ''
     },
     {
         title: 'Contact',
-        link: '/contact'
+        link: '/contact',
+        target: '',
+        icon: '',
     },
     {
         title: 'Github',
-        link: 'https://github.com/erickgiber'
+        link: 'https://github.com/erickgiber',
+        target: '_blank',
+        icon: '',
     }
 ];
