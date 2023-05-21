@@ -1,0 +1,44 @@
+@use '../../config/tools' as tool;
+@use '../../config/variables' as var;
+
+.navbar {
+    width: 100%;
+    max-width: 1980px;
+    @include tool.flex-row;
+    justify-content: space-between;
+    padding: 20px;
+
+    .left, .right {
+        @include tool.flex-row;
+        justify-content: center;
+        list-style: none;
+
+        a {
+            padding: 0 5px;
+            position: relative;
+            text-decoration: none;
+            color: inherit;
+            &:after {
+                transition: 0.2s;
+                content: '';
+                width: 0;
+                height: 2px;
+                position: absolute;
+                width: 0;
+                background-color: transparent;
+                bottom: 0;
+                left: 50%;
+            }
+
+            &:hover:after {
+                left: 0;
+                width: 100%;
+                background-color: var.$primary-color;
+            }
+        }
+    }
+
+    .left {
+        gap: 25px;
+    }
+}
