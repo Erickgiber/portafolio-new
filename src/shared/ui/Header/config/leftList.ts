@@ -1,5 +1,11 @@
 export const leftList = [
     {
+        title: 'Home',
+        link: '/',
+        target: '',
+        icon: 'ion:home',
+    },
+    {
         title: 'Skills',
         link: '/skill',
         target: '',

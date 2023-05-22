@@ -1,35 +1,72 @@
 import type {HeadFC, PageProps} from "gatsby";
 import * as React from "react";
 import '../shared/styles/index.scss';
-import {Header} from "../shared/ui/Header";
-import {Footer} from "../shared/ui/Footer";
-import {BackgroundAnimation} from "../shared/ui/Background";
 import {MetaHTML} from "../shared/ui/MetaHTML";
+import {Wrapper} from "../shared/ui/Wrapper";
+import {animate, initial, initialSkill, transition} from "../shared/config";
+import {motion} from "framer-motion";
 
 const IndexPage: React.FC<PageProps> = () => {
     return (
-        <>
-            <Header/>
-            <BackgroundAnimation/>
-            <main className="main-index">
+        <Wrapper>
+            <motion.main
+                className="main-index"
+                layout
+                initial={initial}
+                animate={animate}
+                transition={transition}
+            >
                 <div>
                     <div className="title">
                         <span> Hello I&apos;m </span>
                         <p> Erick Ramirez </p>
                     </div>
                     <div className="profile">
-                        <img className="photo" src="/photos/erick.jpg" alt="Erick"/>
+                        <motion.img
+                            className="photo"
+                            src="/photos/erick.jpg"
+                            initial={initial}
+                            animate={animate}
+                            transition={{duration: 0.5}}
+                            alt="Erick"/>
                         <div className="skills">
-                            <span> Full stack developer </span>
-                            <span> Web designer / Figma </span>
-                            <span> Software Tester </span>
-                            <span> QA Automation </span>
+                            <motion.span
+                                layout
+                                initial={initialSkill}
+                                animate={animate}
+                                transition={{duration: 0.2}}
+                            >
+                                Full stack developer
+                            </motion.span>
+                            <motion.span
+                                layout
+                                initial={initialSkill}
+                                animate={animate}
+                                transition={{duration: 0.4}}
+                            >
+                                Web designer / Figma
+                            </motion.span>
+                            <motion.span
+                                layout
+                                initial={initialSkill}
+                                animate={animate}
+                                transition={{duration: 0.6}}
+                            >
+                                Software Tester
+                            </motion.span>
+                            <motion.span
+                                layout
+                                initial={initialSkill}
+                                animate={animate}
+                                transition={{duration: 0.8}}
+                            >
+                                QA Automation
+                            </motion.span>
                         </div>
                     </div>
                 </div>
-            </main>
-            <Footer/>
-        </>
+            </motion.main>
+        </Wrapper>
     );
 };
 
