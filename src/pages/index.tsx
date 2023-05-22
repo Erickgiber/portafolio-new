@@ -3,34 +3,14 @@ import * as React from "react";
 import '../shared/styles/index.scss';
 import {Header} from "../shared/ui/Header";
 import {Footer} from "../shared/ui/Footer";
+import {BackgroundAnimation} from "../shared/ui/Background";
 
 const IndexPage: React.FC<PageProps> = () => {
     return (
         <>
             <Header/>
+            <BackgroundAnimation/>
             <main className="main-index">
-                <div className="background">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
                 <div>
                     <div className="title">
                         <span> Hello I&apos;m </span>
