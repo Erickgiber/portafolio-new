@@ -14,8 +14,9 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "eslint": "npx eslint src/**/*.{js,jsx,ts,tsx}",
-    "lint": "eslint src/**/*.{js,jsx,ts,tsx}"
+    "eslint": "npx eslint src/**/*",
+    "lint": "eslint src/**/*",
+    "stylelint": "npx stylelint src/**/*.scss"
   },
   "dependencies": {
     "framer-motion": "^10.12.12",
@@ -39,6 +40,8 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "stylelint": "^15.6.2",
+    "stylelint-config-standard-scss": "^9.0.0",
     "typescript": "^5.0.4"
   }
 }
