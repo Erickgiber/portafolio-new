@@ -48,4 +48,10 @@
   .left {
     gap: 25px;
   }
+
+  .right {
+    @media (max-width: 535px) {
+      display: none;
+    }
+  }
 }

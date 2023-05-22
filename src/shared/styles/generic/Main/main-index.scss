@@ -1,0 +1,78 @@
+@use '../../config/variables' as var;
+@use '../../config/tools' as tool;
+
+.main-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 0 20px;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    span {
+      font-size: calc(1em + 0.5vw);
+    }
+
+    p {
+      font-size: calc(1em + 3vw);
+    }
+  }
+
+  .profile {
+    @include tool.flex-row;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    @media (max-width: 965px) {
+      flex-direction: column;
+    }
+
+    .photo {
+      width: var.$photo-size;
+      height: var.$photo-size;
+      border-radius: 50%;
+    }
+
+    .skills {
+      @include tool.flex-row;
+
+      span {
+        position: relative;
+        color: var.$text-color-box;
+        background-color: var.$box-color;
+        box-shadow: var.$box-shadow-skills;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      @media (max-width: 965px) {
+        flex-direction: column;
+        gap: 10px;
+
+        span:nth-of-type(1n) {
+          left: -30px;
+        }
+
+        span:nth-of-type(2n) {
+          left: 30px;
+        }
+      }
+
+
+      @media (min-width: 965px) {
+        span:nth-of-type(1n) {
+          top: 30px;
+        }
+
+        span:nth-of-type(2n) {
+          top: -50px;
+          left: -50px;
+        }
+      }
+    }
+  }
+}
