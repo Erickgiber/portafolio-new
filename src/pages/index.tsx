@@ -4,6 +4,7 @@ import '../shared/styles/index.scss';
 import {Header} from "../shared/ui/Header";
 import {Footer} from "../shared/ui/Footer";
 import {BackgroundAnimation} from "../shared/ui/Background";
+import {MetaHTML} from "../shared/ui/MetaHTML";
 
 const IndexPage: React.FC<PageProps> = () => {
     return (
@@ -35,8 +36,7 @@ const IndexPage: React.FC<PageProps> = () => {
 export default IndexPage;
 
 export const Head: HeadFC = () => (
-    <>
+    <MetaHTML>
         <title>Erick Ramirez</title>
-        <link rel="icon" href="/icons/favicon.ico"/>
-    </>
+    </MetaHTML>
 );
