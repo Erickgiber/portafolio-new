@@ -4,12 +4,12 @@ export const animate = {
 };
 
 export const transition = {
-    duration: 0.2
+    duration: 0.3
 };
 
 export const initial = {
     opacity: 0,
-    scale: 1.1,
+    scale: 1.05,
 };
 
 export const initialSkill = {
