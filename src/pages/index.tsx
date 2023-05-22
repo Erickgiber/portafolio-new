@@ -9,6 +9,28 @@ const IndexPage: React.FC<PageProps> = () => {
         <>
             <Header/>
             <main className="main-index">
+                <div className="background">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <div>
                     <div className="title">
                         <span> Hello I&apos;m </span>

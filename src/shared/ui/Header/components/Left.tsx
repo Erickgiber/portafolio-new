@@ -8,12 +8,11 @@ export const Left = () => {
         <ul className="left">
             {leftList.map((item, index) => (
                 <li key={index}>
-                    <Link className="link" target={item.target} to={item.link}>
+                    <Link className={`link ${item.title}`} target={item.target} to={item.link}>
                         {item.icon && <Icon icon={item.icon}/>}
-                        {item.title}
+                        <span> {item.title} </span>
                     </Link>
                 </li>
-
             ))}
         </ul>
     );

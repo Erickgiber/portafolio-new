@@ -7,14 +7,13 @@ body {
   font-family: var.$font-family;
   background-color: var.$bg-color;
   color: var.$font-color;
-  background-image: url('/bg/circles.png');
 }
 
 #___gatsby {
   width: 100%;
 
   background: rgba(33, 33, 33, 0.88);
-  background: -webkit-linear-gradient(29deg, rgba(33, 33, 33, 0.88) 0%, rgba(0, 0, 0, 0.93) 100%);
+  background: -webkit-linear-gradient(29deg, rgba(33, 33, 33, 0.88) 0%, rgba(0, 0, 0, 0.7) 100%);
   background: linear-gradient(29deg, rgba(33, 33, 33, 0.88) 0%, rgba(0, 0, 0, 0.93) 100%);
 
   > #gatsby-focus-wrapper {
