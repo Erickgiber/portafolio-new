@@ -41,8 +41,8 @@
       height: var.$photo-size;
       border-radius: 50%;
       pointer-events: none;
-      border: 5px solid var.$bg-color;
-      box-shadow: 0 6px 30px 0 rgba(126, 46, 255, 0.2);
+      border: 7px solid var.$box-color;
+      box-shadow: 0 6px 50px 0 rgba(126, 46, 255, 0.2);
     }
 
     .skills {
@@ -52,8 +52,9 @@
         position: relative;
         color: var.$text-color-box;
         background-color: var.$box-color;
-        box-shadow: var.$box-shadow-skills;
+        box-shadow: 0 0 80px 5px rgba(126, 46, 255, 0.2);
         border-radius: 10px;
+        border: 1px solid #151515;
         padding: 10px;
       }
 
