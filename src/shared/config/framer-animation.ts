@@ -4,7 +4,7 @@ export const animate = {
 };
 
 export const transition = {
-  duration: window.matchMedia("(orientation: portrait)").matches ? 0 : 0.3,
+  duration: 0.3,
 };
 
 export const initial = {
