@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
-import { HeadFC, Link, PageProps } from "gatsby";
+import { HeadFC, PageProps } from "gatsby";
 import * as React from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -60,16 +60,20 @@ const ContactPage: React.FC<PageProps> = () => {
             <p>
               <Icon icon="ant-design:linkedin-outlined" />
               <span>Linkedin:</span>
-              <Link target="_blank" to="https://linkedin.com/in/erickgiber">
+              <a
+                target="_blank"
+                href="https://linkedin.com/in/erickgiber"
+                rel="noreferrer"
+              >
                 Erick Ramirez
-              </Link>
+              </a>
             </p>
             <p>
               <Icon icon="bi:whatsapp" />
               <span>Whatsapp:</span>
-              <Link target="_blank" to="https://wa.link/wo1hx3">
+              <a target="_blank" href="https://wa.link/wo1hx3" rel="noreferrer">
                 +58 412-020-4257
-              </Link>
+              </a>
             </p>
           </div>
         </div>

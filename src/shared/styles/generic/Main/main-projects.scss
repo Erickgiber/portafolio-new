@@ -39,6 +39,8 @@
     }
 
     .screenshot {
+      min-height: 150px;
+      background-color: #303030;
       width: 100%;
       border-radius: 15px;
       pointer-events: none;

@@ -17,4 +17,10 @@ export const projectsList = [
     skill: "React + Ts",
     link: "http://stargonist.website",
   },
+  {
+    title: "TextSnap",
+    img: "https://i.ibb.co/FsX5gv2/image.png",
+    skill: "React JS",
+    link: "https://textsnap.netlify.app/",
+  },
 ];
