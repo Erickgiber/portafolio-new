@@ -7,7 +7,24 @@ import { MetaHTML } from "../shared/ui/MetaHTML";
 import { Wrapper } from "../shared/ui/Wrapper";
 
 const IndexPage: React.FC<PageProps> = () => {
-  const queryMatch = window.matchMedia("(orientation: portrait)").matches;
+  const [isPortrait, setIsPortrait] = React.useState(
+    typeof window !== "undefined" &&
+      window.matchMedia("(orientation: portrait)").matches
+  );
+
+  React.useEffect(() => {
+    const mediaQuery = window.matchMedia("(orientation: portrait)");
+
+    const handleOrientationChange = (event: MediaQueryListEvent) => {
+      setIsPortrait(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleOrientationChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleOrientationChange);
+    };
+  }, []);
 
   return (
     <Wrapper>
@@ -16,7 +33,7 @@ const IndexPage: React.FC<PageProps> = () => {
         layout
         initial={initial}
         animate={animate}
-        transition={queryMatch ? { duration: 0 } : transition}
+        transition={isPortrait ? { duration: 0 } : transition}
       >
         <div>
           <div className="title">
