@@ -12,7 +12,7 @@ export const SkillsComponent = () => {
             src={skill.img}
             alt={skill.title}
           />
-          <strong className="level">{skill.level}</strong>
+          {/* <strong className="level">{skill.level}</strong> */}
         </article>
       ))}
     </>
