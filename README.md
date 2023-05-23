@@ -11,11 +11,14 @@
 
 1.  **Clone this repository.**
 
-    Use npm install
+    How clone this repository
 
     ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
+    # Using git
+    git clone https://github.com/Erickgiber/portafolio-new.
+
+    # Using Github CLI
+    gh repo clone Erickgiber/portafolio-new
     ```
 
 2.  **Start developing.**
