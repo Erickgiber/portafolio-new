@@ -7,7 +7,7 @@ export const leftList = [
     },
     {
         title: 'Skills',
-        link: '/skill',
+        link: '/skills',
         target: '',
         icon: 'ri:reactjs-line',
     },
