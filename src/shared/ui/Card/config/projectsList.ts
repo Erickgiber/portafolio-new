@@ -15,6 +15,6 @@ export const projectsList = [
     title: "Stargonist Page",
     img: "https://i.ibb.co/3rD9Q7z/image.png",
     skill: "React + Ts",
-    link: "https://stargonist.netlify.app/",
+    link: "http://stargonist.website",
   },
 ];

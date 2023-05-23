@@ -6,11 +6,7 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <div className="content">
-        <Link
-          target="_blank"
-          to="https://stargonist.netlify.app/"
-          className="left"
-        >
+        <Link target="_blank" to="http://stargonist.website/" className="left">
           <img className="logo" src="/icons/stargonist.png" alt="Stargonist" />
           <p> Stargonist founder </p>
         </Link>
