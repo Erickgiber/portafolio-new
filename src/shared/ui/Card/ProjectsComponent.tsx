@@ -1,4 +1,3 @@
-import { Link } from "gatsby";
 import * as React from "react";
 import { projectsList } from "./config";
 
@@ -6,11 +5,12 @@ export const ProjectsComponent = () => {
   return (
     <>
       {projectsList.map((project, index) => (
-        <Link
+        <a
           target="_blank"
-          to={`${project.link}`}
+          href={`${project.link}`}
           className="card"
           key={index}
+          rel="noreferrer"
         >
           <span className="title">{project.title}</span>
           <img
@@ -19,7 +19,7 @@ export const ProjectsComponent = () => {
             alt={project.title}
           />
           <strong className="skill">{project.skill}</strong>
-        </Link>
+        </a>
       ))}
     </>
   );

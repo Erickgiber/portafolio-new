@@ -7,6 +7,8 @@ import { MetaHTML } from "../shared/ui/MetaHTML";
 import { Wrapper } from "../shared/ui/Wrapper";
 
 const IndexPage: React.FC<PageProps> = () => {
+  const queryMatch = window.matchMedia("(orientation: portrait)").matches;
+
   return (
     <Wrapper>
       <motion.main
@@ -14,7 +16,7 @@ const IndexPage: React.FC<PageProps> = () => {
         layout
         initial={initial}
         animate={animate}
-        transition={transition}
+        transition={queryMatch ? { duration: 0 } : transition}
       >
         <div>
           <div className="title">
