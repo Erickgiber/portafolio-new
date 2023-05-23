@@ -1,23 +1,28 @@
 import { Icon } from "@iconify/react";
-import { Link } from "gatsby";
 import * as React from "react";
 
 export const Footer = () => {
   return (
     <footer className="footer">
       <div className="content">
-        <Link target="_blank" to="http://stargonist.website/" className="left">
+        <a
+          target="_blank"
+          href="http://stargonist.website/"
+          className="left"
+          rel="noreferrer"
+        >
           <img className="logo" src="/icons/stargonist.png" alt="Stargonist" />
           <p> Stargonist founder </p>
-        </Link>
-        <Link
+        </a>
+        <a
           target="_blank"
-          to="https://www.linkedin.com/in/erickgiber/"
+          href="https://www.linkedin.com/in/erickgiber/"
           className="right"
+          rel="noreferrer"
         >
           <p> Linkedin </p>
           <Icon icon="skill-icons:linkedin" />
-        </Link>
+        </a>
       </div>
     </footer>
   );

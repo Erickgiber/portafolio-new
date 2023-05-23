@@ -1,15 +1,17 @@
-import {Header} from "../Header";
-import {BackgroundAnimation} from "../Background";
-import {Footer} from "../Footer";
 import * as React from "react";
-import {ReactElement} from "react";
+import { BackgroundAnimation } from "../Background";
+import { Footer } from "../Footer";
+import { Header } from "../Header";
 
-// eslint-disable-next-line
-export const Wrapper = ({children}: any): ReactElement => (
-    <>
-        <Header/>
-        <BackgroundAnimation/>
-        {children}
-        <Footer/>
-    </>
+type WrapperProps = {
+  children: React.ReactNode;
+};
+
+export const Wrapper: React.FC<WrapperProps> = ({ children }) => (
+  <>
+    <Header />
+    <BackgroundAnimation />
+    {children}
+    <Footer />
+  </>
 );

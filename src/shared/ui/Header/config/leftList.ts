@@ -29,10 +29,4 @@ export const leftList = [
     target: "",
     icon: "mdi:contact-mail",
   },
-  {
-    title: "Github",
-    link: "https://github.com/erickgiber",
-    target: "_blank",
-    icon: "mdi:github",
-  },
 ];
