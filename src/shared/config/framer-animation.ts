@@ -1,12 +1,10 @@
-const mediaQuery = window.matchMedia("(orientation: portrait)");
-
 export const animate = {
   opacity: 1,
   scale: 1,
 };
 
 export const transition = {
-  duration: mediaQuery.matches ? 0 : 0.3,
+  duration: window.matchMedia("(orientation: portrait)").matches ? 0 : 0.3,
 };
 
 export const initial = {
