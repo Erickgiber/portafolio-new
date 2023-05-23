@@ -9,12 +9,31 @@ import { MetaHTML } from "../shared/ui/MetaHTML";
 import { Wrapper } from "../shared/ui/Wrapper";
 
 const ProjectsPage: React.FC<PageProps> = () => {
+  const [isPortrait, setIsPortrait] = React.useState(
+    typeof window !== "undefined" &&
+      window.matchMedia("(orientation: portrait)").matches
+  );
+
+  React.useEffect(() => {
+    const mediaQuery = window.matchMedia("(orientation: portrait)");
+
+    const handleOrientationChange = (event: MediaQueryListEvent) => {
+      setIsPortrait(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleOrientationChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleOrientationChange);
+    };
+  }, []);
+
   return (
     <Wrapper>
       <motion.main
         initial={initial}
         animate={animate}
-        transition={transition}
+        transition={isPortrait ? { duration: 0 } : transition}
         className="main-projects"
       >
         <ProjectsComponent />

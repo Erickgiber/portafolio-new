@@ -8,6 +8,25 @@ import { MetaHTML } from "../shared/ui/MetaHTML";
 import { Wrapper } from "../shared/ui/Wrapper";
 
 const AboutPage: React.FC<PageProps> = () => {
+  const [isPortrait, setIsPortrait] = React.useState(
+    typeof window !== "undefined" &&
+      window.matchMedia("(orientation: portrait)").matches
+  );
+
+  React.useEffect(() => {
+    const mediaQuery = window.matchMedia("(orientation: portrait)");
+
+    const handleOrientationChange = (event: MediaQueryListEvent) => {
+      setIsPortrait(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleOrientationChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleOrientationChange);
+    };
+  }, []);
+
   return (
     <Wrapper>
       <motion.main
@@ -15,7 +34,7 @@ const AboutPage: React.FC<PageProps> = () => {
         layout
         initial={initial}
         animate={animate}
-        transition={transition}
+        transition={isPortrait ? { duration: 0 } : transition}
       >
         <div className="left">
           <img className="photo" src="/photos/erick.jpg" alt="Erick" />
