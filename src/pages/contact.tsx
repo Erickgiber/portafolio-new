@@ -2,12 +2,33 @@ import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { HeadFC, Link, PageProps } from "gatsby";
 import * as React from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { animate, initial, transition } from "../shared/config";
 import "../shared/styles/index.scss";
 import { MetaHTML } from "../shared/ui/MetaHTML";
 import { Wrapper } from "../shared/ui/Wrapper";
 
 const ContactPage: React.FC<PageProps> = () => {
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        if (!toast.isActive("copy-to-clipboard")) {
+          toast.success(`${text} Coppied to clipboard!`, {
+            toastId: "copy-to-clipboard",
+            autoClose: 2000, // Duración en milisegundos (en este caso, 3 segundos)
+            position: toast.POSITION.TOP_RIGHT, // Posición de la notificación
+            pauseOnHover: false,
+            draggable: false,
+          });
+        }
+      })
+      .catch((error) => {
+        toast.error("Error copying to clipboard:", error);
+      });
+  };
+
   return (
     <Wrapper>
       <motion.main
@@ -16,15 +37,22 @@ const ContactPage: React.FC<PageProps> = () => {
         transition={transition}
         className="main-contact"
       >
+        <ToastContainer />
         <div>
           <h2 className="title"> Contact me </h2>
           <div className="contacts">
-            <p>
+            <p
+              className="email"
+              onClick={() => copyToClipboard("erickgiber7@gmail.com")}
+            >
               <Icon icon="line-md:email-twotone" />
               <span>Email:</span>
               <strong> erickgiber7@gmail.com </strong>
             </p>
-            <p>
+            <p
+              className="phone"
+              onClick={() => copyToClipboard("+58 412-020-4257")}
+            >
               <Icon icon="ic:baseline-phone" />
               <span>Phone:</span>
               <strong> +58 412-020-4257 </strong>
@@ -33,16 +61,14 @@ const ContactPage: React.FC<PageProps> = () => {
               <Icon icon="ant-design:linkedin-outlined" />
               <span>Linkedin:</span>
               <Link target="_blank" to="https://linkedin.com/in/erickgiber">
-                {" "}
-                Erick Ramirez{" "}
+                Erick Ramirez
               </Link>
             </p>
             <p>
               <Icon icon="bi:whatsapp" />
               <span>Whatsapp:</span>
               <Link target="_blank" to="https://wa.link/wo1hx3">
-                {" "}
-                Erick Ramirez{" "}
+                +58 412-020-4257
               </Link>
             </p>
           </div>

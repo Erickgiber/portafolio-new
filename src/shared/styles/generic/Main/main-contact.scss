@@ -1,5 +1,5 @@
-@use '../../config/variables' as var;
-@use '../../config/tools' as tool;
+@use "../../config/variables" as var;
+@use "../../config/tools" as tool;
 
 .main-contact {
   display: flex;
@@ -27,7 +27,22 @@
       align-items: center;
       gap: 3px;
       font-size: 17px;
-  
+
+      &.email,
+      &.phone {
+        strong {
+          cursor: pointer;
+          transition: 0.2s;
+
+          &:active {
+            user-select: none;
+            transition: 0s;
+            transform: scale(0.95);
+            color: var.$primary-color;
+          }
+        }
+      }
+
       .iconify {
         font-size: 19px;
       }
