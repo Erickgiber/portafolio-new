@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { HeadFC } from "gatsby";
 import * as React from 'react';
 import { animate, initial, transition } from "../shared/config";
+import '../shared/styles/index.scss';
 import { IconVenezuela } from '../shared/ui/Icon';
 import { MetaHTML } from "../shared/ui/MetaHTML";
 import { Wrapper } from "../shared/ui/Wrapper";

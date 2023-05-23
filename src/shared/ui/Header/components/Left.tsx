@@ -1,7 +1,7 @@
-import {Icon} from '@iconify/react';
-import {Link} from 'gatsby';
-import React from 'react';
-import {leftList} from "../config";
+import { Icon } from '@iconify/react';
+import { Link } from 'gatsby';
+import * as React from 'react';
+import { leftList } from "../config";
 
 export const Left = () => {
     return (

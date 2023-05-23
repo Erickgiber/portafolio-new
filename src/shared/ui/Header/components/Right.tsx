@@ -1,7 +1,7 @@
-import React from 'react';
-import {rightList} from '../config';
-import {Link} from "gatsby";
-import {Icon} from "@iconify/react";
+import { Icon } from "@iconify/react";
+import { Link } from "gatsby";
+import * as React from 'react';
+import { rightList } from '../config';
 
 export const Right = () => {
     return (

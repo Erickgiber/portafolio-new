@@ -1,6 +1,6 @@
-import React from 'react';
-import {Link} from "gatsby";
-import {Icon} from "@iconify/react";
+import { Icon } from "@iconify/react";
+import { Link } from "gatsby";
+import * as React from 'react';
 
 export const Footer = () => {
     return (

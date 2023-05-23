@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Left } from './components';
 import { Right } from './components/Right';
 
