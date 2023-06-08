@@ -46,6 +46,11 @@ export const skillsList = [
     level: "Good",
   },
   {
+    title: "Sveltekit",
+    img: "/icons/sveltekit.png",
+    level: "Good",
+  },
+  {
     title: "Node JS",
     img: "/icons/node.png",
     level: "Good",

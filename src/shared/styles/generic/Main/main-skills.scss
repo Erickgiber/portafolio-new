@@ -58,6 +58,11 @@
       &.Gatsby {
         padding: 16px;
       }
+
+      &.Sveltekit {
+        padding: 10px;
+        object-fit: contain;
+      }
     }
   }
 }
