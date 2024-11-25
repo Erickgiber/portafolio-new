@@ -21,6 +21,6 @@ export const projectsList = [
     title: "TextSnap",
     img: "https://i.ibb.co/FsX5gv2/image.png",
     skill: "React JS",
-    link: "https://textsnap.netlify.app/",
+    link: "https://text-snap-app.vercel.app/",
   },
 ];
