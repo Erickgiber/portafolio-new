@@ -16,6 +16,11 @@ export const skillsList = [
     level: "Advanced",
   },
   {
+    title: "Typescript",
+    img: "/icons/typescript.png",
+    level: "Advanced",
+  },
+  {
     title: "Php",
     img: "/icons/php.png",
     level: "Medium",
@@ -31,11 +36,6 @@ export const skillsList = [
     level: "Advanced",
   },
   {
-    title: "Typescript",
-    img: "/icons/typescript.png",
-    level: "Advanced",
-  },
-  {
     title: "Gatsby",
     img: "/icons/gatsby.png",
     level: "Medium",
@@ -48,6 +48,11 @@ export const skillsList = [
   {
     title: "Sveltekit",
     img: "/icons/sveltekit.png",
+    level: "Good",
+  },
+  {
+    title: "Angular",
+    img: "/icons/angular.png",
     level: "Good",
   },
   {
@@ -68,6 +73,11 @@ export const skillsList = [
   {
     title: "Github",
     img: "/icons/github.png",
+    level: "Advanced",
+  },
+  {
+    title: "Azure",
+    img: "/icons/azure.png",
     level: "Advanced",
   },
   {

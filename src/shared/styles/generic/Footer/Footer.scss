@@ -12,7 +12,8 @@
     justify-content: space-between;
     padding: 20px;
 
-    .left, .right {
+    .left,
+    .right {
       @include tool.flex-row;
       gap: 5px;
       font-size: 15px;
