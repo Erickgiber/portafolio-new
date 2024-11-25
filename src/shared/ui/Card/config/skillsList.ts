@@ -61,6 +61,11 @@ export const skillsList = [
     level: "Good",
   },
   {
+    title: "Puppeteer",
+    img: "/icons/puppeteer.svg",
+    level: "Good",
+  },
+  {
     title: "Figma",
     img: "/icons/figma.png",
     level: "Advanced",
