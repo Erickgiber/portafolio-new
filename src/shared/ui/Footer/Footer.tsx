@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="content">
         <a
           target="_blank"
-          href="http://stargonist.website/"
+          href="https://stargonist.vercel.app/"
           className="left"
           rel="noreferrer"
         >
