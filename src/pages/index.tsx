@@ -60,5 +60,6 @@ export default IndexPage;
 export const Head: HeadFC = () => (
   <MetaHTML>
     <title>Erick Ramirez</title>
+    <meta name="p:domain_verify" content="06c616187998b87732451a61bd561338"/>
   </MetaHTML>
 );
